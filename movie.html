@@ -4,9 +4,47 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <title>
-    Movie Recommender
-  </title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/movie_style.css">
+  <script type="./assets/movie_script.js"></script>
+  <title>Movie Recommender</title>
 </head>
+
+<body>
+    <h1>Movie Recommender</h1>
+    <div class="category__box">
+        <form action="/recommend" method="POST">
+            <label for="genre">Genre:</label>
+            <select id="genre" name="genre">
+                <option value="" disabled selected hidden>Choose a genre</option>
+                <option value="action">Action</option>
+                <option value="Comedy">Comedy</option>
+                <option value="Drama">Drama</option>
+                <!-- Add more here -->
+            </select>
+            <br>
+            
+            <div class="rating__slide__container">
+                <label for="bottom_rating_val">Rating:</label>
+                <input type="range" id="rating__slider" class="slider" min="0" max="10">
+            </div>
+
+            <!-- <label for="year_range">Year Range:</label>
+            <input type="range" id="year_range" name="year_range" min="1960" max="2023">
+            <br> -->
+
+            <label for="minValue">Min Value:</label>
+            <input type="range" id="minValue" min="0" max="100" value="0" step="1">
+            <span id="minLabel">0</span>
+
+            <label for="maxValue">Max Value:</label>
+            <input type="range" id="maxValue" min="0" max="100" value="100" step="1">
+            <span id="maxLabel">100</span>
+
+            <br>
+            <input type="submit" value="submit">
+            
+        </form>
+    </div>
+
+    
+</body>

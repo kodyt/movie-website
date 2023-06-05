@@ -1,3 +1,7 @@
+body{
+    background-color: lightblue;
+}
+
 .intro_section{
     display: grid;
     align-items: center;
