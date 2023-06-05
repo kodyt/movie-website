@@ -10,6 +10,7 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="stylesheet" href="./assets/css/style.css">
 
   <title>
     Kody and Hanna's Amazing Website
@@ -21,17 +22,25 @@
     <h2>HELLO</h2>
     <nav>
       <a href="./index.html">Home</a> <br>
-      <a href="./hanna.html">Hanna's Page</a> <br>
-      <a href="./kody.html">Kody's Page</a> <br>
+      <a href="./assets/hanna.html">Hanna's Page</a> <br>
+      <a href="./assets/kody.html">Kody's Page</a> <br>
     </nav>
     <p>
       Welcome to our attempt at learning html and css. Allow us to introduce ourselves
     </p>
-
-    <h1>This is Kody:<br> </h1>
-    <img src="https://lh3.googleusercontent.com/eSYKQb4Dm0f5PW0YiLfB0NJVPMUPD2OKVbahDvituqeq0aEzBcsWDRljoinhagBLpf8=w2400"width="350" height="480" />
-    <h1> This is Hanna: <br></h1>
-    <img src="https://lh3.googleusercontent.com/Xw0PBu9HmnPKR6qNW-dvlQpr4FKZdYsQmY9I19lG51H8LtBQDAtTVbrfFKY_2KfEt8OxaqPCJxn87zo0suRTE4uwf-Yh-ktK9gfYzbuEuDvV19xFiY7GIDYaqLQBbA5S7xMz3Rou9rE=w1920-h1080" width="350" height="480"/>
+    <div class="intro_section">
+      <div class="intro_box">
+        <h1>This is Kody:<br> </h1>
+        <img src="https://lh3.googleusercontent.com/eSYKQb4Dm0f5PW0YiLfB0NJVPMUPD2OKVbahDvituqeq0aEzBcsWDRljoinhagBLpf8=w2400"width="350" height="480" /> 
+      </div>
+      
+      <div class="intro_box">
+        <h1> This is Hanna: <br></h1>
+        <img src="https://lh3.googleusercontent.com/Xw0PBu9HmnPKR6qNW-dvlQpr4FKZdYsQmY9I19lG51H8LtBQDAtTVbrfFKY_2KfEt8OxaqPCJxn87zo0suRTE4uwf-Yh-ktK9gfYzbuEuDvV19xFiY7GIDYaqLQBbA5S7xMz3Rou9rE=w1920-h1080" width="350" height="480"/>
+      </div>
+      
+    </div>
+    
   </div> 
 
 
@@ -48,32 +57,11 @@
 
   <br><br><br>
   <!-- testing button things -->
-  <style>
-    .button {
-      border: none;
-      color: rgb(96, 96, 244);
-      padding: 15px 15px;
-      text-align: center;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-    }
-    .button1 {
-      border: black;
-      background-color: rgb(217, 8, 8);
-      color: black;
-    }
-
-    .button1:hover {
-      background-color: #4CAF50;
-      color: white;
-    }
-  </style>
 </body>
   
   <button class="button button1"
-          onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley';">Link to youtube</button> 
+          onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley';">Link to youtube
+  </button> 
     <a>Everyone go follow Kody's youtube page!</a>
   
 </html>
