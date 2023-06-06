@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
   <link rel="stylesheet" type="text/css" href="./assets/css/movie_style.css">
-  <script type="./assets/movie_script.js"></script>
+  
   <title>Movie Recommender</title>
 </head>
 
@@ -23,28 +23,33 @@
             </select>
             <br>
             
-            <div class="rating__slide__container">
+            <!-- <div class="rating__slide__container">
                 <label for="bottom_rating_val">Rating:</label>
                 <input type="range" id="rating__slider" class="slider" min="0" max="10">
+            </div> -->
+            <div class="slider__container">
+                <div class="rating">
+                    <label for="ratingSlider">Rating Limit:</label>
+                    <input type="range" min="0" max="10" value="10" id="ratingSlider" step="0.1">
+                    <span id="rating"></span>
+                </div>
+                
+                <div class="yearSliders">
+                    <label for="minSlider">Min Year:</label>
+                    <input type="range" min="0" max="100" value="0" id="minSlider" step="1">
+                    <span id="minYear"></span>
+                    <br>
+
+                    <label for="maxSlider">Max Year:</label>
+                    <input type="range" min="0" max="100" value="100" id="maxSlider" step="1">
+                    <span id="maxYear"></span>
+                </div>
+                <br>
             </div>
-
-            <!-- <label for="year_range">Year Range:</label>
-            <input type="range" id="year_range" name="year_range" min="1960" max="2023">
-            <br> -->
-
-            <label for="minValue">Min Value:</label>
-            <input type="range" id="minValue" min="0" max="100" value="0" step="1">
-            <span id="minLabel">0</span>
-
-            <label for="maxValue">Max Value:</label>
-            <input type="range" id="maxValue" min="0" max="100" value="100" step="1">
-            <span id="maxLabel">100</span>
-
-            <br>
-            <input type="submit" value="submit">
+            <input type="submit" value="Get Recommendations!">
             
         </form>
-    </div>
 
-    
+
+    <script src="./assets/movie_script.js"></script>
 </body>
