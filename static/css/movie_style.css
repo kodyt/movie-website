@@ -20,6 +20,8 @@ body{
   .yearSliders input[type="range"]:not(:last-child) {
     margin-right: 10px; /* Add desired gap between sliders */
   }
+
+  .minYear
   
   .yearSliders input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;

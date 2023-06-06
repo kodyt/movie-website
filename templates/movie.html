@@ -4,13 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="stylesheet" type="text/css" href="./assets/css/movie_style.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/movie_style.css') }}">
   
   <title>Movie Recommender</title>
 </head>
 
 <body>
     <h1>Movie Recommender</h1>
+    <div style="text-align:center">
+        <nav>
+          <a href="{{ url_for('about') }}">About the creators</a>
+        </nav>
+    </div>
     <div class="category__box">
         <form action="/recommend" method="POST">
             <label for="genre">Genre:</label>
@@ -22,11 +27,7 @@
                 <!-- Add more here -->
             </select>
             <br>
-            
-            <!-- <div class="rating__slide__container">
-                <label for="bottom_rating_val">Rating:</label>
-                <input type="range" id="rating__slider" class="slider" min="0" max="10">
-            </div> -->
+
             <div class="slider__container">
                 <div class="rating">
                     <label for="ratingSlider">Rating Limit:</label>
@@ -49,7 +50,7 @@
             <input type="submit" value="Get Recommendations!">
             
         </form>
+    </div>
 
-
-    <script src="./assets/movie_script.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>

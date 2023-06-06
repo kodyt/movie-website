@@ -10,7 +10,8 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  
 
   <title>
     Kody and Hanna's Amazing Website
@@ -21,10 +22,10 @@
   <div style="text-align:center">
     <h2>HELLO</h2>
     <nav>
-      <a href="./movie.html">Movie Recommender</a> <br>
-      <a href="./index.html">Home</a> <br>
-      <a href="./assets/hanna.html">Hanna's Page</a> <br>
-      <a href="./assets/kody.html">Kody's Page</a> <br>
+      <a href="{{ url_for('home') }}">Movie Recommender</a>
+      <!-- <a href="{{ url_for('hanna') }}">Hanna's Page</a>
+      <a href="{{ url_for('kody') }}">Kody's Page</a> -->
+
     </nav>
     <p>
       Welcome to our attempt at learning html and css. Allow us to introduce ourselves
