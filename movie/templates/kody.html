@@ -34,12 +34,12 @@
       </div>
         <div style="text-align:center">
           <nav>
-            <a href="../index.html">Home</a> <br>
-            <a href="./hanna.html">Hanna's Page</a> <br>
-            <a href="./kody.html">Kody's Page</a> <br>
+            <a href="{{ url_for('home_page') }}">Movie Recommender</a><br>
+            <a href="{{ url_for('about') }}">About Page</a><br>
+            <a href="{{ url_for('hanna_page') }}">Hanna's Page</a><br>
           </nav>
         </div>
-        <img src="https://lh3.googleusercontent.com/OWIInKVzsaAvXlw50KmVIftXf6IAAU9q42UUIyZ_vkdWsMkm9XyEGnbdn0rSkNWoaddZ8dnL0majhFH5rHAB7G8xijtiJ69e5rQRVA5VtwNI0PJbdLc5pAB-M2VejvwpfQnSZNuX_A=w2400" width="350" height="480"/>
+        <img src="{{ url_for('download_file', filename='/uploads/https://lh3.googleusercontent.com/OWIInKVzsaAvXlw50KmVIftXf6IAAU9q42UUIyZ_vkdWsMkm9XyEGnbdn0rSkNWoaddZ8dnL0majhFH5rHAB7G8xijtiJ69e5rQRVA5VtwNI0PJbdLc5pAB-M2VejvwpfQnSZNuX_A=w2400')}}" width="350" height="480"/>
         <p1><br> Little bit of monkey bizness for you</p1>
         <hr  />
     </div> 

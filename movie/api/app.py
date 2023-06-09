@@ -1,8 +1,9 @@
 """This file can contain the code related to accessing the movie database API, making requests, and fetching movie data"""
-import requests
-from flask import Flask, request, render_template
+# import requests
+import movie
+from flask import request, render_template
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
 # Change this
 # API_KEY = "YOUR_API_KEY"
@@ -24,12 +25,12 @@ app = Flask(__name__)
 #     if min_rating:
 #         params[""]
 
-@app.route("/")
+@movie.app.route("/")
 def home():
-    return render_template("index.html")
+    return render_template("movie.html")
 
 
-@app.route("/recommend", methods=["POST"])
+@movie.app.route("/recommend", methods=["POST"])
 def recommend():
     genre = request.form.get("genre")
     rating_limit = float(request.form.get("ratingSlider"))
@@ -37,11 +38,20 @@ def recommend():
     max_year = int(request.form.get("maxSlider"))
     print("HELLO!")
 
-@app.route("/about")
+@movie.app.route("/about")
 def about():
     return render_template("about.html")
 
+@movie.app.route("/hanna")
+def hanna_page():
+    return render_template("hanna.html")
+
+@movie.app.route("/kody")
+def kody_page():
+    return render_template("kody.html")
+
+# @ap
 
 if __name__ == "__main__":
-    app.run()
+    movie.app.run()
 

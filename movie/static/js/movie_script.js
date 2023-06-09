@@ -12,6 +12,10 @@ ratingSlider.oninput = () => {
 var minSlider = document.getElementById("minSlider");
 var minYear = document.getElementById("minYear");
 minYear.innerHTML = minSlider.value; // Display the default slider value
+//Max Slider
+var maxSlider = document.getElementById("maxSlider");
+var maxYear = document.getElementById("maxYear");
+
 
 // Update the current slider value (each time you drag the slider handle)
 minSlider.oninput = function() {
@@ -19,9 +23,7 @@ minSlider.oninput = function() {
 }
 
 
-//Max Slider
-var maxSlider = document.getElementById("maxSlider");
-var maxYear = document.getElementById("maxYear");
+
 maxYear.innerHTML = maxSlider.value; // Display the default slider value
 
 // Update the current slider value (each time you drag the slider handle)

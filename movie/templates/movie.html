@@ -37,12 +37,12 @@
                 
                 <div class="yearSliders">
                     <label for="minSlider">Min Year:</label>
-                    <input type="range" min="0" max="100" value="0" id="minSlider" step="1">
+                    <input type="range" min="1970" max="2023" value="1970" id="minSlider" step="1">
                     <span id="minYear"></span>
                     <br>
 
                     <label for="maxSlider">Max Year:</label>
-                    <input type="range" min="0" max="100" value="100" id="maxSlider" step="1">
+                    <input type="range" min="1970" max="2023" value="2023" id="maxSlider" step="1">
                     <span id="maxYear"></span>
                 </div>
                 <br>
@@ -52,5 +52,5 @@
         </form>
     </div>
 
-    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/movie_script.js') }}"></script>
 </body>
