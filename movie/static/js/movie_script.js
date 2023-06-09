@@ -30,3 +30,16 @@ maxYear.innerHTML = maxSlider.value; // Display the default slider value
 maxSlider.oninput = function() {
   maxYear.innerHTML = maxSlider.value;
 }
+
+// User has to pick a genre
+function handleFormSubmission(event){
+  event.preventDefault();
+
+  const genreInput = document.getElementById('genre')
+  if (genreInput.value === ''){
+    alert('Please choose a genre.');
+    return;
+  }
+
+  event.target.submit();
+}

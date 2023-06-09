@@ -33,10 +33,13 @@ def home():
 @movie.app.route("/recommend", methods=["POST"])
 def recommend():
     genre = request.form.get("genre")
+    if genre is None:
+        return home()
     rating_limit = float(request.form.get("ratingSlider"))
     min_year = int(request.form.get("minSlider"))
     max_year = int(request.form.get("maxSlider"))
-    print("HELLO!")
+    
+    return "Hello"
 
 @movie.app.route("/about")
 def about():
@@ -50,7 +53,15 @@ def hanna_page():
 def kody_page():
     return render_template("kody.html")
 
-# @ap
+# # Retrieves the data from the Movie HTML form submission
+# @movie.app.route('/recommend', methods=['POST'])
+# def recommend_submit(): # Maybe needs to be named recommend()
+#     genre = request.form.get('genre')
+#     rating = float(request.form.get('rating'))
+#     min_year = int(request.form.get('minYear'))
+#     max_year = int(request.form.get('maxYear'))
+#     return "data"
+
 
 if __name__ == "__main__":
     movie.app.run()

@@ -17,7 +17,7 @@
         </nav>
     </div>
     <div class="category__box">
-        <form action="/recommend" method="POST">
+        <form action="/recommend" method="POST" onsubmit="handleFormSubmission(event)">
             <label for="genre">Genre:</label>
             <select id="genre" name="genre">
                 <option value="" disabled selected hidden>Choose a genre</option>
@@ -31,18 +31,18 @@
             <div class="slider__container">
                 <div class="rating">
                     <label for="ratingSlider">Rating Limit:</label>
-                    <input type="range" min="0" max="10" value="10" id="ratingSlider" step="0.1">
+                    <input type="range" name='ratingSlider' min="0" max="10" value="10" id="ratingSlider" step="0.1">
                     <span id="rating"></span>
                 </div>
                 
                 <div class="yearSliders">
                     <label for="minSlider">Min Year:</label>
-                    <input type="range" min="1970" max="2023" value="1970" id="minSlider" step="1">
+                    <input type="range" name="minSlider" min="1970" max="2023" value="1970" id="minSlider" step="1">
                     <span id="minYear"></span>
                     <br>
 
                     <label for="maxSlider">Max Year:</label>
-                    <input type="range" min="1970" max="2023" value="2023" id="maxSlider" step="1">
+                    <input type="range" name="maxSlider" min="1970" max="2023" value="2023" id="maxSlider" step="1">
                     <span id="maxYear"></span>
                 </div>
                 <br>
@@ -50,6 +50,11 @@
             <input type="submit" value="Get Recommendations!">
             
         </form>
+
+
+
+        <div class="output">           
+        </div>
     </div>
 
     <script src="{{ url_for('static', filename='js/movie_script.js') }}"></script>
