@@ -9,7 +9,7 @@
   -->
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='uploads/favicon.ico') }}" />
 
   <title>
     Hanna's Page
@@ -27,7 +27,7 @@
           <a href="{{ url_for('kody_page') }}">Kody's Page</a><br>
         </nav>
       </div>
-      <img src="https://lh3.googleusercontent.com/Xw0PBu9HmnPKR6qNW-dvlQpr4FKZdYsQmY9I19lG51H8LtBQDAtTVbrfFKY_2KfEt8OxaqPCJxn87zo0suRTE4uwf-Yh-ktK9gfYzbuEuDvV19xFiY7GIDYaqLQBbA5S7xMz3Rou9rE=w1920-h1080" width="350" height="480"/>
+      <img src="{{ url_for('static', filename='uploads/69272480497__297E7B95-6D38-4176-9B62-731F055DE367.jpg')}}" width="350" height="480"/>
     </div> 
 
     <br>
@@ -60,5 +60,13 @@
   <button class="button button1"
           onclick="window.location.href='https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley';">Link to youtube</button> 
     <a>Everyone go follow MY youtube page!</a>
+  
+  <tr>
+      <td colspan = "2" bgcolor = "#b5dcb3">
+         <center>
+            Made by Hanna AND Kody :)
+         </center>
+      </td>
+   </tr>
   
 </html>

@@ -10,7 +10,7 @@
         -->
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='uploads/favicon.ico') }}" />
 
         <title>
           Kody's Page
@@ -34,12 +34,12 @@
       </div>
         <div style="text-align:center">
           <nav>
-            <a href="{{ url_for('home_page') }}">Movie Recommender</a><br>
+            <a href="{{ url_for('home') }}">Movie Recommender</a><br>
             <a href="{{ url_for('about') }}">About Page</a><br>
             <a href="{{ url_for('hanna_page') }}">Hanna's Page</a><br>
           </nav>
         </div>
-        <img src="{{ url_for('download_file', filename='/uploads/https://lh3.googleusercontent.com/OWIInKVzsaAvXlw50KmVIftXf6IAAU9q42UUIyZ_vkdWsMkm9XyEGnbdn0rSkNWoaddZ8dnL0majhFH5rHAB7G8xijtiJ69e5rQRVA5VtwNI0PJbdLc5pAB-M2VejvwpfQnSZNuX_A=w2400')}}" width="350" height="480"/>
+        <img src="{{ url_for('static', filename='/uploads/68887684551__F44ED88C-A9A4-447C-9252-D56B61F52748.jpg')}}" width="350" height="480"/>
         <p1><br> Little bit of monkey bizness for you</p1>
         <hr  />
     </div> 
@@ -64,7 +64,7 @@
       <tr valign = "top">
          <td width = "50">
           <h2><u>Doggy Center</u></h2>
-          <img src="https://lh3.googleusercontent.com/-sMmM6lNzlJVjTpHI_iHwoX-hi4oQl218Fj3e-_CqfY1GK4XvxnuhvR9_Vi7v6z-mcBcpePY46QLc2ruOkshxXF_S1rFTv0oyG22au3636f8ZEr0JUXYWBo7usU6XDBlHSRwwXaxtQ=w2400" width="350" height="480"/>
+          <img src="{{ url_for('static', filename='uploads/IMG_0506.JPEG' )}}" width="350" height="480"/>
           <p><FONT COLOR=red>This is the boi Louis. He wishes that you have a wonderful day, everyday.<br> Height: ~1.2ft <br> Weight: ~14.5 lbs <br> Notes: He will steal your girl</FONT></p>
          </td>
          
@@ -72,6 +72,7 @@
           <h2><u>Follow me!</u></h2>
           <a href="https://www.linkedin.com/in/kody-takada/"> LinkedIn</a> <br>
           <a href="https://www.facebook.com/kody.takada.5"> Facebook</a> <br>
+          <a href="https://kodyt.github.io/">Personal Website</a> <br>
          </td>
       </tr>
       <tr>

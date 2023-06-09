@@ -36,10 +36,18 @@ function handleFormSubmission(event){
   event.preventDefault();
 
   const genreInput = document.getElementById('genre')
+  const min = document.getElementById('minYear')
+  const max = document.getElementById('maxYear')
   if (genreInput.value === ''){
     alert('Please choose a genre.');
     return;
   }
+  
+  if (min.innerHTML >= max.innerHTML){
+    alert('Min year has to be less than Max year :)')
+    return;
+  }
+
 
   event.target.submit();
 }
